@@ -76,19 +76,17 @@ endfunction
 
 " Palettes
 " --------
-
-
 let s:white       = { "gui": "#CDD3DE", "cterm": "253" }
-let s:black       = { "gui": "#263238", "cterm": "235" }
+let s:black       = { "gui": "#181819", "cterm": "235" }
 let s:lightblack  = { "gui": "#2D2E27", "cterm": "234" }
 let s:lightblack2 = { "gui": "#383a3e", "cterm": "236" }
 let s:darkblack   = { "gui": "#1F292D", "cterm": "233" }
 let s:grey        = { "gui": "#3F565F", "cterm": "238" }
 let s:lightgrey   = { "gui": "#575b61", "cterm": "241" }
-let s:darkgrey    = { "gui": "#232E33", "cterm": "236" }
+let s:darkgrey    = { "gui": "#0f1111", "cterm": "236" }
 let s:coolgrey    = { "gui": "#506E79", "cterm": "241" }
 
-let s:pink        = { "gui": "#FC3488", "cterm": "197" }
+let s:pink        = { "gui": "#FC3488", "cterm": "203" }
 let s:green       = { "gui": "#A6E22E", "cterm": "148" }
 let s:aqua        = { "gui": "#66d9ef", "cterm": "81" }
 let s:blue        = { "gui": "#82B1FF", "cterm": "81" }
@@ -109,7 +107,7 @@ let s:changebg    = { "gui": "#5f5f87", "cterm": "60" }
 
 " editor
 call s:h("Normal",        { "fg": s:white,      "bg": s:black })
-call s:h("ColorColumn",   {                     "bg": s:lightgrey })
+call s:h("ColorColumn",   {                     "bg": s:darkblack })
 call s:h("CursorColumn",  {                     "bg": s:lightblack2 })
 call s:h("CursorLine",    {                     "bg": s:darkblack })
 call s:h("NonText",       { "fg": s:lightgrey })
