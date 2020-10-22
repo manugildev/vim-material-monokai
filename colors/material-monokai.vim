@@ -77,7 +77,7 @@ endfunction
 " Palettes
 " --------
 let s:white       = { "gui": "#CDD3DE", "cterm": "253" }
-let s:black       = { "gui": "#181819", "cterm": "235" }
+let s:black       = { "gui": "#0A0E14", "cterm": "235" }
 let s:lightblack  = { "gui": "#2D2E27", "cterm": "234" }
 let s:lightblack2 = { "gui": "#383a3e", "cterm": "236" }
 let s:darkblack   = { "gui": "#1F292D", "cterm": "233" }
