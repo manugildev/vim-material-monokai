@@ -78,7 +78,7 @@ endfunction
 " --------
 let s:white       = { "gui": "#CDD3DE", "cterm": "253" }
 let s:black       = { "gui": "#0A0E14", "cterm": "235" }
-let s:lightblack  = { "gui": "#2D2E27", "cterm": "234" }
+let s:lightblack  = { "gui": "#0E1218", "cterm": "234" }
 let s:lightblack2 = { "gui": "#383a3e", "cterm": "236" }
 let s:darkblack   = { "gui": "#1F292D", "cterm": "233" }
 let s:grey        = { "gui": "#3F565F", "cterm": "238" }
@@ -126,7 +126,7 @@ call s:h("WarningMsg",    { "fg": s:red })
 call s:h("VertSplit",     { "fg": s:grey,       "bg": s:darkgrey })
 call s:h("LineNr",        { "fg": s:grey,       "bg": s:darkgrey })
 call s:h("CursorLineNr",  { "fg": s:aqua,       "bg": s:darkblack })
-call s:h("SignColumn",    {                     "bg": s:lightblack })
+call s:h("SignColumn",    {                     "bg": s:darkgrey })
 call s:h("SpellCap",      {                                           "format": "underline"})
 call s:h("SpellLocal",    { "fg": s:yellow,                           "format": "underline"})
 if g:materialmonokai_subtle_spell == 1
