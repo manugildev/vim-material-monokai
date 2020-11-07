@@ -79,7 +79,7 @@ endfunction
 let s:white       = { "gui": "#CDD3DE", "cterm": "253" }
 let s:black       = { "gui": "#0A0E14", "cterm": "235" }
 let s:lightblack  = { "gui": "#0E1218", "cterm": "234" }
-let s:lightblack2 = { "gui": "#383a3e", "cterm": "236" }
+let s:lightblack2 = { "gui": "#383A3E", "cterm": "236" }
 let s:darkblack   = { "gui": "#1F292D", "cterm": "233" }
 let s:grey        = { "gui": "#3F565F", "cterm": "238" }
 let s:lightgrey   = { "gui": "#575b61", "cterm": "241" }
@@ -89,18 +89,18 @@ let s:coolgrey    = { "gui": "#506E79", "cterm": "241" }
 let s:pink        = { "gui": "#FC3488", "cterm": "203" }
 let s:green       = { "gui": "#A6E22E", "cterm": "148" }
 let s:aqua        = { "gui": "#66d9ef", "cterm": "81" }
-let s:blue        = { "gui": "#82B1FF", "cterm": "81" }
+let s:blue        = { "gui": "#82B1FF", "cterm": "69" }
 let s:yellow      = { "gui": "#E6DB74", "cterm": "186" }
 let s:orange      = { "gui": "#FD9720", "cterm": "208" }
 let s:purple      = { "gui": "#ae81ff", "cterm": "141" }
-let s:red         = { "gui": "#e73c50", "cterm": "196" }
-let s:darkred     = { "gui": "#5f0000", "cterm": "52" }
+let s:red         = { "gui": "#E73C50", "cterm": "197" }
+let s:darkred     = { "gui": "#5f0000", "cterm": "161" }
 
-let s:addfg       = { "gui": "#d7ffaf", "cterm": "193" }
-let s:addbg       = { "gui": "#5f875f", "cterm": "65" }
-let s:delbg       = { "gui": "#f75f5f", "cterm": "167" }
+let s:addfg       = { "gui": "#D7FFAF", "cterm": "193" }
+let s:addbg       = { "gui": "#5F875F", "cterm": "65" }
+let s:delbg       = { "gui": "#F75F5F", "cterm": "167" }
 let s:changefg    = { "gui": "#d7d7ff", "cterm": "189" }
-let s:changebg    = { "gui": "#5f5f87", "cterm": "60" }
+let s:changebg    = { "gui": "#5F5F87", "cterm": "60" }
 
 " Highlighting
 " ------------
@@ -398,3 +398,27 @@ call s:h("org_shade_stars",             { "fg": s:grey })
 call s:h("org_list_unordered",          { "fg": s:orange })
 call s:h("org_list_ordered",            { "fg": s:orange })
 call s:h("org_timestamp",               { "fg": s:pink })
+
+
+" +------------------------+
+" | Neovim terminal colors |
+" +------------------------+
+
+if has("nvim")
+  let g:terminal_color_0 =  s:black.gui
+  let g:terminal_color_1 =  s:red.gui
+  let g:terminal_color_2 =  s:green.gui
+  let g:terminal_color_3 =  s:yellow.gui
+  let g:terminal_color_4 =  s:blue.gui
+  let g:terminal_color_5 =  s:purple.gui
+  let g:terminal_color_6 =  s:aqua.gui
+  let g:terminal_color_7 =  s:white.gui
+  let g:terminal_color_8 =  s:grey.gui
+  let g:terminal_color_9 =  s:darkred.gui
+  let g:terminal_color_10 = s:green.gui " No dark version
+  let g:terminalj_color_11 = s:orange.gui
+  let g:terminal_color_14 = s:aqua.gui " No dark version
+  let g:terminal_color_15 = s:coolgrey.gui
+  let g:terminal_color_background = g:terminal_color_0
+  let g:terminal_color_foreground = g:terminal_color_7
+endif
