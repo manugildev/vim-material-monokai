@@ -89,18 +89,18 @@ let s:coolgrey    = { "gui": "#506E79", "cterm": "241" }
 let s:pink        = { "gui": "#FC3488", "cterm": "203" }
 let s:green       = { "gui": "#A6E22E", "cterm": "148" }
 let s:aqua        = { "gui": "#66d9ef", "cterm": "81" }
-let s:blue        = { "gui": "#82B1FF", "cterm": "69" }
+let s:blue        = { "gui": "#8787d7", "cterm": "104" }
 let s:yellow      = { "gui": "#E6DB74", "cterm": "186" }
 let s:orange      = { "gui": "#FD9720", "cterm": "208" }
 let s:purple      = { "gui": "#ae81ff", "cterm": "141" }
 let s:red         = { "gui": "#E73C50", "cterm": "197" }
-let s:darkred     = { "gui": "#5f0000", "cterm": "161" }
+let s:darkred     = { "gui": "#D7005F", "cterm": "161" }
 
 let s:addfg       = { "gui": "#D7FFAF", "cterm": "193" }
 let s:addbg       = { "gui": "#5F875F", "cterm": "65" }
 let s:delbg       = { "gui": "#F75F5F", "cterm": "167" }
 let s:changefg    = { "gui": "#d7d7ff", "cterm": "189" }
-let s:changebg    = { "gui": "#5F5F87", "cterm": "60" }
+let s:changebg    = { "gui": "#5F5F87", "cterm": "63" }
 
 " Highlighting
 " ------------
@@ -117,7 +117,8 @@ call s:h("WildMenu",      { "fg": s:white,      "bg": s:pink })
 call s:h("TabLine",       { "fg": s:white,      "bg": s:darkblack,    "format": "reverse" })
 call s:h("Visual",        {                     "bg": s:lightgrey })
 call s:h("Search",        { "fg": s:black,      "bg": s:yellow })
-call s:h("MatchParen",    { "fg": s:black,      "bg": s:purple })
+call s:h("MatchParen",    { "fg": s:white,      "bg": s:grey, })
+call s:h("Cursor",        {                                           "format": "reverse" })
 call s:h("Question",      { "fg": s:yellow })
 call s:h("ModeMsg",       { "fg": s:yellow })
 call s:h("MoreMsg",       { "fg": s:yellow })
@@ -129,9 +130,10 @@ call s:h("CursorLineNr",  { "fg": s:aqua,       "bg": s:darkblack })
 call s:h("SignColumn",    {                     "bg": s:darkgrey })
 call s:h("SpellCap",      {                                           "format": "underline"})
 call s:h("SpellLocal",    { "fg": s:yellow,                           "format": "underline"})
+
 if g:materialmonokai_subtle_spell == 1
   call s:h("SpellBad",    {                                           "format": "underline"})
-else
+els
   call s:h("SpellBad",    { "fg": s:red,        "bg": s:yellow })
 endif
 
@@ -167,41 +169,41 @@ call s:h("Boolean",       { "fg": s:purple })
 call s:h("Character",     { "fg": s:yellow })
 call s:h("String",        { "fg": s:yellow })
 
-call s:h("Type",          { "fg": s:aqua })
+call s:h("Type",          { "fg": s:green })
 call s:h("Structure",     { "fg": s:aqua })
 call s:h("StorageClass",  { "fg": s:aqua })
-call s:h("Typedef",       { "fg": s:aqua })
+call s:h("Typedef",       { "fg": s:green })
 
-call s:h("Identifier",    { "fg": s:green })
-call s:h("Function",      { "fg": s:green })
+call s:h("Identifier",    { "fg": s:white })
+call s:h("Function",      { "fg": s:orange })
 
 call s:h("Statement",     { "fg": s:pink })
-call s:h("Operator",      { "fg": s:pink })
-call s:h("Label",         { "fg": s:pink })
+call s:h("Operator",      { "fg": s:red })
+call s:h("Label",         { "fg": s:red })
 call s:h("Keyword",       { "fg": s:aqua })
 "        Conditional"
 "        Repeat"
 "        Exception"
 
 call s:h("PreProc",       { "fg": s:green })
-call s:h("Include",       { "fg": s:pink })
+call s:h("Include",       { "fg": s:aqua })
 call s:h("Define",        { "fg": s:pink })
-call s:h("Macro",         { "fg": s:green })
+call s:h("Macro",         { "fg": s:white })
 call s:h("PreCondit",     { "fg": s:green })
 
 call s:h("Special",       { "fg": s:aqua })
-call s:h("SpecialChar",   { "fg": s:pink })
+call s:h("SpecialChar",   { "fg": s:aqua })
 call s:h("Delimiter",     { "fg": s:red })
-call s:h("SpecialComment",{ "fg": s:aqua })
+call s:h("SpecialComment",{ "fg": s:coolgrey })
 call s:h("Tag",           { "fg": s:pink })
 "        Debug"
 
-call s:h("Todo",          { "fg": s:aqua,     "format": "bold,italic" })
-call s:h("Comment",       { "fg": s:coolgrey, "format": "italic" })
+call s:h("Todo",          { "fg": s:aqua,      "format": "bold,italic" })
+call s:h("Comment",       { "fg": s:lightgrey, "format": "italic" })
 
 call s:h("Underlined",    { "fg": s:green })
 call s:h("Ignore",        {})
-call s:h("Error",         { "fg": s:red, "bg": s:darkred })
+call s:h("Error",         { "fg": s:white, "bg": s:red })
 
 " ALE
 " ---
@@ -399,11 +401,27 @@ call s:h("org_list_unordered",          { "fg": s:orange })
 call s:h("org_list_ordered",            { "fg": s:orange })
 call s:h("org_timestamp",               { "fg": s:pink })
 
+" Rust
+call s:h("rsFieldAccess",   {"fg": s:orange })
+
+call s:h("rsModule",        {"fg": s:pink })
+call s:h("rsTypeAlias",     {"fg": s:aqua })
+call s:h("rsSelfType",      {"fg": s:purple })
+call s:h("rsSelfValue",     {"fg": s:purple })
+call s:h("rsUserType",      {"fg": s:green })
+call s:h("rsCrateType",     {"fg": s:green })
+call s:h("rsForeignType",   {"fg": s:green })
+call s:h("rsLibraryType",   { "fg": s:purple })
+call s:h("rsLibraryType",   { "fg": s:purple })
+call s:h("rsForeignConst",  { "fg": s:green })
+
+call s:h("rsAmpersand",     { "fg": s:purple })
+" call s:h("rsOperator",      { "fg": s:red })
+" call s:h("rsDelimiter",     { "fg": s:red })
 
 " +------------------------+
 " | Neovim terminal colors |
 " +------------------------+
-
 if has("nvim")
   let g:terminal_color_0 =  s:black.gui
   let g:terminal_color_1 =  s:red.gui
