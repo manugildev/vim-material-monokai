@@ -4,6 +4,8 @@ Inspired by brendanblackwood's [material-monokai-syntax theme](https://github.co
 
 This theme uses sickill's [vim-monokai](https://github.com/sickill/vim-monokai) as a base with its colors shifted to the Material Design color palette. It is recommended that you use a [matching terminal theme](https://github.com/MartinSeeler/iterm2-material-design).
 
+Modified by [manugildev](github.com/manugildev) and added rust support (requires: [vim-rust-syntax-ext](https://github.com/arzg/vim-rust-syntax-ext)).
+
 > **NOTE:** A terminal that supports true colors is strongly recommended. There is a 256 color fallback, but it doesn't look that great.
 
 ## Screenshots
