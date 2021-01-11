@@ -116,9 +116,9 @@ call s:h("StatusLineNC",  { "fg": s:darkgrey,   "bg": s:coolgrey,     "format": 
 call s:h("WildMenu",      { "fg": s:white,      "bg": s:pink })
 call s:h("TabLine",       { "fg": s:white,      "bg": s:darkblack,    "format": "reverse" })
 call s:h("Visual",        {                     "bg": s:lightgrey })
-call s:h("Search",        { "fg": s:black,      "bg": s:yellow })
 call s:h("MatchParen",    { "fg": s:white,      "bg": s:grey, })
 call s:h("Cursor",        {                                           "format": "reverse" })
+call s:h("Search",        {                                           "format": "reverse" })
 call s:h("Question",      { "fg": s:yellow })
 call s:h("ModeMsg",       { "fg": s:yellow })
 call s:h("MoreMsg",       { "fg": s:yellow })
@@ -139,7 +139,7 @@ endif
 
 " misc
 call s:h("SpecialKey",    { "fg": s:grey })
-call s:h("Title",         { "fg": s:yellow })
+call s:h("Title",         { "fg": s:orange })
 call s:h("Directory",     { "fg": s:aqua })
 
 " diff
@@ -188,7 +188,7 @@ call s:h("Keyword",       { "fg": s:aqua })
 call s:h("PreProc",       { "fg": s:green })
 call s:h("Include",       { "fg": s:aqua })
 call s:h("Define",        { "fg": s:pink })
-call s:h("Macro",         { "fg": s:white })
+call s:h("Macro",         { "fg": s:green })
 call s:h("PreCondit",     { "fg": s:green })
 
 call s:h("Special",       { "fg": s:aqua })
@@ -402,7 +402,7 @@ call s:h("org_list_ordered",            { "fg": s:orange })
 call s:h("org_timestamp",               { "fg": s:pink })
 
 " Rust
-call s:h("rsFieldAccess",   {"fg": s:orange })
+" call s:h("rsFieldAccess",   {"fg": s:orange })
 
 call s:h("rsModule",        {"fg": s:pink })
 call s:h("rsTypeAlias",     {"fg": s:aqua })
@@ -412,10 +412,10 @@ call s:h("rsUserType",      {"fg": s:green })
 call s:h("rsCrateType",     {"fg": s:green })
 call s:h("rsForeignType",   {"fg": s:green })
 call s:h("rsLibraryType",   { "fg": s:purple })
-call s:h("rsLibraryType",   { "fg": s:purple })
 call s:h("rsForeignConst",  { "fg": s:green })
 
 call s:h("rsAmpersand",     { "fg": s:purple })
+call s:h("rsAttribute",     { "fg": s:red })
 " call s:h("rsOperator",      { "fg": s:red })
 " call s:h("rsDelimiter",     { "fg": s:red })
 
